@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-06-12T00:56:01.578643",
-  "total": 20,
+  "total": 25,
   "coupons": [
     {
       "code": "WELCOME15",
@@ -99,22 +99,6 @@
       "found_at": "2026-06-12T00:54:41.343147"
     },
     {
-      "code": "FARMER30",
-      "brand": "TheFarmersDog",
-      "source": "verified",
-      "title": "首单30%OFF",
-      "discount": "30% OFF",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
-      "code": "WELCOME20",
-      "brand": "TheFarmersDog",
-      "source": "verified",
-      "title": "全场20%OFF",
-      "discount": "20% OFF",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
       "code": "PELO100",
       "brand": "Peloton",
       "source": "verified",
@@ -161,6 +145,62 @@
       "title": "首单10%OFF",
       "discount": "10% OFF",
       "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "SLEEP15",
+      "brand": "Casper",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T00:34:46.953148"
+    },
+    {
+      "code": "NAP100",
+      "brand": "Casper",
+      "source": "verified",
+      "title": "床垫$100OFF",
+      "discount": "$100 OFF",
+      "found_at": "2026-06-13T00:34:46.953148"
+    },
+    {
+      "code": "PILLOW20",
+      "brand": "Casper",
+      "source": "verified",
+      "title": "枕头20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T00:34:46.953148"
+    },
+    {
+      "code": "VDOG20",
+      "brand": "V-Dog",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T00:37:00.553304"
+    },
+    {
+      "code": "VEGAN10",
+      "brand": "V-Dog",
+      "source": "verified",
+      "title": "老客10%复购",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T00:37:00.553304"
+    },
+    {
+      "code": "KOJI15",
+      "brand": "Wild Earth",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T00:37:00.553304"
+    },
+    {
+      "code": "EARTH30",
+      "brand": "Wild Earth",
+      "source": "verified",
+      "title": "30天退款保证",
+      "discount": "30-Day Guarantee",
+      "found_at": "2026-06-13T00:37:00.553304"
     }
   ]
 }
