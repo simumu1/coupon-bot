@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if current_brand %}{{ current_brand }} Coupon Codes & Promo Codes 2026 | Get the Best Deals
+{% elif current_niche %}{{ niches[current_niche].name }} Coupons & Deals 2026 | Top Brands
+{% else %}Best DTC Brand Coupon Codes 2026 | Verified Promo Codes
+{% endif %}</title>
+    <meta name="description" content="{% if current_brand %}Find the latest verified {{ current_brand }} coupon codes, promo codes, and discounts. Save up to 20% on {{ current_brand }} products. Updated daily.
+{% elif current_niche %}Browse the best {{ niches[current_niche].name }} coupon codes and deals from top brands. Updated regularly with verified discounts.
+{% else %}Find verified coupon codes and promo codes for top DTC brands including home, pet, fitness & more. Updated daily.{% endif %}">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://couponbot.example.com{% if current_brand %}/brand/{{ current_brand.lower() }}{% elif current_niche %}/niche/{{ current_niche }}{% else %}/{% endif %}">
+
+    {% if schema %}
+    <script type="application/ld+json">
+{{ schema }}
+    </script>
+    {% endif %}
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.5; }
+        .header { background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%); color: #fff; padding: 30px 0 24px; }
+        .header-inner { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+        .header p { font-size: 15px; color: #a1a1a6; margin-top: 6px; max-width: 600px; }
+        .header .updated-badge { display: inline-block; margin-top: 10px; font-size: 12px; color: #30d158; background: rgba(48, 209, 88, 0.15); padding: 3px 10px; border-radius: 12px; }
+        .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        .nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+        .nav a { padding: 7px 16px; border-radius: 20px; background: #e8e8ed; color: #1d1d1f; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+        .nav a:hover, .nav a.active { background: #007aff; color: #fff; }
+        .stats { background: #fff; border-radius: 14px; padding: 16px 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .stats span { font-size: 14px; color: #86868b; }
+        .stats strong { color: #1d1d1f; }
+        .coupon-grid { display: grid; gap: 12px; margin-bottom: 32px; }
+        .coupon-card { background: #fff; border-radius: 14px; padding: 18px 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; border: 1px solid transparent; }
+        .coupon-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-1px); border-color: #007aff20; }
+        .coupon-left { flex: 1; }
+        .coupon-brand { font-size: 14px; font-weight: 600; color: #007aff; text-decoration: none; }
+        .coupon-brand:hover { text-decoration: underline; }
+        .coupon-title { font-size: 14px; color: #1d1d1f; margin-top: 3px; }
+        .coupon-discount { font-size: 12px; color: #30d158; font-weight: 600; margin-top: 2px; }
+        .coupon-code { display: inline-flex; align-items: center; gap: 8px; background: #f0f7ff; border: 1.5px dashed #007aff; border-radius: 10px; padding: 8px 18px; font-family: 'SF Mono', 'Cascadia Code', monospace; font-size: 17px; font-weight: 700; color: #007aff; cursor: pointer; transition: all 0.2s; margin-left: 16px; white-space: nowrap; }
+        .coupon-code:hover { background: #007aff; color: #fff; }
+        .coupon-code.copied { background: #34c759; border-color: #34c759; color: #fff; }
+        .coupon-source { font-size: 11px; color: #b0b0b8; margin-top: 4px; }
+        .tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 8px; background: #f0f0f5; color: #86868b; margin-right: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tag.verified { background: #e8f5e9; color: #2e7d32; }
+        .tag.reddit { background: #fff3e0; color: #e65100; }
+        .tag.brand { background: #e3f2fd; color: #1565c0; }
+        .empty { text-align: center; padding: 60px 20px; color: #86868b; }
+        .empty h3 { font-size: 20px; margin-bottom: 8px; }
+
+        /* FAQ Section - GEO重点 */
+        .faq-section { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .faq-section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+        .faq-item { border-top: 1px solid #f0f0f5; padding: 14px 0; }
+        .faq-item:first-child { border-top: none; }
+        .faq-q { font-size: 15px; font-weight: 600; color: #1d1d1f; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-q::after { content: '+'; font-size: 18px; color: #86868b; }
+        .faq-q.open::after { content: '−'; }
+        .faq-a { font-size: 14px; color: #86868b; margin-top: 8px; display: none; line-height: 1.6; }
+        .faq-a.open { display: block; }
+
+        /* Brand Info Section */
+        .brand-info { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .brand-info h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .brand-info p { font-size: 14px; color: #86868b; line-height: 1.6; }
+
+        .footer { text-align: center; padding: 30px 20px; color: #86868b; font-size: 12px; line-height: 1.8; }
+        .footer a { color: #86868b; text-decoration: none; margin: 0 8px; }
+        .footer a:hover { color: #007aff; }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 22px; }
+            .coupon-card { flex-direction: column; align-items: stretch; gap: 12px; }
+            .coupon-code { margin-left: 0; text-align: center; justify-content: center; }
+            .stats { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-inner">
+        <h1>
+            {% if current_brand %}🏷️ {{ current_brand }} Coupon Codes
+            {% elif current_niche %}🏷️ {{ niches[current_niche].name }} Coupons
+            {% else %}🏷️ Best DTC Coupon Codes
+            {% endif %}
+        </h1>
+        <p>
+            {% if current_brand %}Find the latest verified {{ current_brand }} promo codes and discounts. Updated daily.
+            {% elif current_niche %}Browse {{ niches[current_niche].name }} coupon codes from top brands.
+            {% else %}Find verified coupon codes for top DTC brands. Save money on home, pet, fitness & more.
+            {% endif %}
+        </p>
+        {% if updated %}
+        <div class="updated-badge">✓ Updated {{ updated[:10] }}</div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container">
+    <nav class="nav">
+        <a href="/" class="{% if not current_brand and not current_niche %}active{% endif %}">🏠 All</a>
+        {% for key, niche in niches.items() %}
+        <a href="/niche/{{ key }}" class="{% if current_niche == key %}active{% endif %}">{{ niche.name }}</a>
+        {% endfor %}
+    </nav>
+
+    <div class="stats">
+        <div>
+            <span>Total: <strong>{{ total }}</strong> coupons</span>
+            {% if current_brand %}
+            <span style="margin-left: 12px;">for <strong>{{ current_brand }}</strong></span>
+            {% endif %}
+        </div>
+        {% if updated %}
+        <span>🔄 Last checked: <strong>{{ updated[:10] }}</strong></span>
+        {% endif %}
+    </div>
+
+    {% if coupons %}
+    <div class="coupon-grid">
+        {% for c in coupons %}
+        <div class="coupon-card" itemscope itemtype="https://schema.org/Offer">
+            <div class="coupon-left">
+                {% if not current_brand %}<a href="/brand/{{ c.brand }}" class="coupon-brand">{{ c.brand }}</a>{% endif %}
+                <div class="coupon-title" itemprop="description">{{ c.title }}</div>
+                {% if c.discount %}<div class="coupon-discount">💰 {{ c.discount }}</div>{% endif %}
+                <div class="coupon-source">
+                    <span class="tag {% if c.source == 'verified' %}verified{% else %}{{ c.source }}{% endif %}">{{ c.source|upper }}</span>
+                    {% if c.found_at %}<span style="color:#b0b0b8;">found {{ c.found_at[:10] }}</span>{% endif %}
+                </div>
+            </div>
+            <div class="coupon-code" onclick="copyCode(this, '{{ c.code }}')" data-code="{{ c.code }}">{{ c.code }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty">
+        <h3>🕐 No coupons yet</h3>
+        <p>Run the scraper: <code>python scraper.py</code></p>
+    </div>
+    {% endif %}
+
+    {% if current_brand and faq %}
+    <!-- FAQ Section - Structured for AI -->
+    <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>❓ {{ current_brand }} Coupon FAQs</h2>
+        {% for item in faq %}
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">{{ item.q }}</div>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">{{ item.a }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Homepage specific content -->
+    {% if not current_brand and not current_niche %}
+    <div class="brand-info">
+        <h2>📋 Browse by Category</h2>
+        <p>Find the best coupon codes and promo codes for your favorite DTC brands. We track discounts from home furniture, pet supplies, fitness equipment, and more — all in one place.</p>
+        <p style="margin-top:8px;">{% for key, niche in niches.items() %}<a href="/niche/{{ key }}" style="color:#007aff;text-decoration:none;margin-right:16px;">→ {{ niche.name }}</a>{% endfor %}</p>
+    </div>
+    {% endif %}
+</div>
+
+<div class="footer">
+    <p>CouponBot · Automatically collected coupon codes for reference</p>
+    <p>Always verify coupon validity before checkout</p>
+    <p>
+        {% for key, niche in niches.items() %}
+        <a href="/niche/{{ key }}">{{ niche.name }}</a>
+        {% endfor %}
+        <a href="/">Home</a>
+    </p>
+    <p style="margin-top:8px;color:#b0b0b8;">&copy; 2026 CouponBot · Open data for everyone</p>
+</div>
+
+<script>
+function copyCode(el, code) {
+    navigator.clipboard.writeText(code).then(() => {
+        const orig = el.innerHTML;
+        el.innerHTML = '✅ Copied!';
+        el.classList.add('copied');
+        setTimeout(() => {
+            el.innerHTML = code;
+            el.classList.remove('copied');
+        }, 2000);
+    });
+}
+function toggleFaq(el) {
+    el.classList.toggle('open');
+    const answer = el.nextElementSibling;
+    answer.classList.toggle('open');
+}
+</script>
+</body>
+</html>

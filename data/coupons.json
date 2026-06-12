@@ -1,0 +1,166 @@
+{
+  "updated_at": "2026-06-12T00:56:01.578643",
+  "total": 20,
+  "coupons": [
+    {
+      "code": "WELCOME15",
+      "brand": "Article",
+      "source": "verified",
+      "title": "新用户首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "FREESHIP",
+      "brand": "Article",
+      "source": "verified",
+      "title": "全场免运费",
+      "discount": "Free Shipping",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "SAVE20",
+      "brand": "Burrow",
+      "source": "verified",
+      "title": "全场20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "WELCOME10",
+      "brand": "Burrow",
+      "source": "verified",
+      "title": "新用户10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "HELLO15",
+      "brand": "Brooklinen",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "BUNDLEUP",
+      "brand": "Brooklinen",
+      "source": "verified",
+      "title": "套装额外折扣",
+      "discount": "Bundle Deal",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "WELCOME20",
+      "brand": "Parachute",
+      "source": "verified",
+      "title": "新用户20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "FREESHIP",
+      "brand": "Parachute",
+      "source": "verified",
+      "title": "免运费",
+      "discount": "Free Shipping",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "BARK20",
+      "brand": "BarkBox",
+      "source": "verified",
+      "title": "首月20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "BARKBDAY",
+      "brand": "BarkBox",
+      "source": "verified",
+      "title": "生日月免费升级",
+      "discount": "Free Upgrade",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "FURBO20",
+      "brand": "Furbo",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "LITTER10",
+      "brand": "LitterRobot",
+      "source": "verified",
+      "title": "首单$50OFF",
+      "discount": "$50 OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "FARMER30",
+      "brand": "TheFarmersDog",
+      "source": "verified",
+      "title": "首单30%OFF",
+      "discount": "30% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "WELCOME20",
+      "brand": "TheFarmersDog",
+      "source": "verified",
+      "title": "全场20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "PELO100",
+      "brand": "Peloton",
+      "source": "verified",
+      "title": "配件$100OFF",
+      "discount": "$100 OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "ONEPELO",
+      "brand": "Peloton",
+      "source": "verified",
+      "title": "首年会员免费",
+      "discount": "Free Year",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "TONAL200",
+      "brand": "Tonal",
+      "source": "verified",
+      "title": "设备$200OFF",
+      "discount": "$200 OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "WHOOP1M",
+      "brand": "Whoop",
+      "source": "verified",
+      "title": "首月免费",
+      "discount": "Free Month",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "OURA20",
+      "brand": "Oura",
+      "source": "verified",
+      "title": "戒指$20OFF",
+      "discount": "$20 OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "EIGHT10",
+      "brand": "EightSleep",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    }
+  ]
+}

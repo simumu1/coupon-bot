@@ -1,0 +1,36 @@
+"""Coupon Bot 配置"""
+import os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+# 爬虫频率 (小时)
+SCRAPE_INTERVAL = 6
+
+# 缓存文件
+COUPON_FILE = os.path.join(BASE, 'data', 'coupons.json')
+
+# 目标品类 - 先做DTC家居/工具品牌，壁垒低、巨头少
+TARGET_NICHES = {
+    'home_garden': {
+        'name': '家居花园',
+        'brands': [
+            'Article', 'Burrow', 'Brooklinen', 'Parachute',
+        ],
+        'reddit_subs': ['homeowners', 'DesignMyRoom'],
+    },
+    'pet_supplies': {
+        'name': '宠物用品',
+        'brands': [
+            'BarkBox', 'Furbo', 'LitterRobot', 'TheFarmersDog',
+        ],
+        'reddit_subs': ['puppy101', 'CatAdvice'],
+    },
+}
+
+# 联盟平台（需手动注册）
+AFFILIATE_NETWORKS = {
+    'Awin': 'https://www.awin.com/gb/publisher',
+    'ShareASale': 'https://www.shareasale.com/shareasale.cfm',
+    'Impact': 'https://impact.com/',
+    'Partnerize': 'https://partnerize.com/',
+}
