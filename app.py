@@ -4,7 +4,7 @@ import json, os
 from flask import Flask, render_template, jsonify, request
 from datetime import datetime
 
-from config import COUPON_FILE, TARGET_NICHES, GA_MEASUREMENT_ID
+from config import COUPON_FILE, TARGET_NICHES, GA_MEASUREMENT_ID, GOATCOUNTER_DOMAIN
 
 app = Flask(__name__)
 
@@ -182,6 +182,7 @@ def index():
                            updated=data.get('updated_at', ''),
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
+                           gc_domain=GOATCOUNTER_DOMAIN,
                            schema=None,
                            faq=None,
                            brand_faq_data=None)
@@ -218,6 +219,7 @@ def brand_page(brand_name):
                            updated=data.get('updated_at', ''),
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
+                           gc_domain=GOATCOUNTER_DOMAIN,
                            current_brand=brand_name_display,
                            schema=json.dumps(schema, indent=2),
                            faq=faq,
@@ -242,6 +244,7 @@ def niche_page(niche_key):
                            updated=data.get('updated_at', ''),
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
+                           gc_domain=GOATCOUNTER_DOMAIN,
                            current_niche=niche_key,
                            schema=json.dumps(schema, indent=2),
                            faq=None,
@@ -421,6 +424,7 @@ def article_page(slug):
                            content_html=article['content'],
                            canonical=f'/article/{slug}',
                            ga_id=GA_MEASUREMENT_ID,
+                           gc_domain=GOATCOUNTER_DOMAIN,
                            total_brands=len(brands),
                            total_coupons=data['total'])
 

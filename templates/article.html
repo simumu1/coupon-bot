@@ -8,6 +8,12 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://simumu.pythonanywhere.com{{ canonical }}">
     
+    {% if gc_domain %}
+    <!-- GoatCounter 网站统计 -->
+    <script data-goatcounter="https://{{ gc_domain }}.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    {% endif %}
+
     {% if ga_id %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
     <script>

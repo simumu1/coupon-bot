@@ -38,6 +38,10 @@ TARGET_NICHES = {
     },
 }
 
+# GoatCounter 网站统计 — 填你的 goatcounter 域名即可启用
+# 注册: https://www.goatcounter.com (邮箱即可，无需翻墙)
+GOATCOUNTER_DOMAIN = ''  # 例: 'couponbot' (对应 couponbot.goatcounter.com)
+
 # Google Analytics (GA4) - 填入你的 Measurement ID 即可启用
 GA_MEASUREMENT_ID = ''  # 例: 'G-XXXXXXXXXX'
 
