@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-12T00:56:01.578643",
-  "total": 25,
+  "updated_at": "2026-06-13T12:00:00.000000",
+  "total": 33,
   "coupons": [
     {
       "code": "WELCOME15",
@@ -96,6 +96,22 @@
       "source": "verified",
       "title": "首单$50OFF",
       "discount": "$50 OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "FARMER30",
+      "brand": "TheFarmersDog",
+      "source": "verified",
+      "title": "首单30%OFF",
+      "discount": "30% OFF",
+      "found_at": "2026-06-12T00:54:41.343147"
+    },
+    {
+      "code": "WELCOME20",
+      "brand": "TheFarmersDog",
+      "source": "verified",
+      "title": "全场20%OFF",
+      "discount": "20% OFF",
       "found_at": "2026-06-12T00:54:41.343147"
     },
     {
@@ -201,6 +217,54 @@
       "title": "30天退款保证",
       "discount": "30-Day Guarantee",
       "found_at": "2026-06-13T00:37:00.553304"
+    },
+    {
+      "code": "WELCOME15",
+      "brand": "West Elm",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "SHIPFREE",
+      "brand": "West Elm",
+      "source": "verified",
+      "title": "满$49免运费",
+      "discount": "Free Shipping",
+      "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "ROVE10",
+      "brand": "Rove Concepts",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "HELLO25",
+      "brand": "Lululemon",
+      "source": "verified",
+      "title": "新用户25%OFF",
+      "discount": "25% OFF",
+      "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "HYDROW200",
+      "brand": "Hydrow",
+      "source": "verified",
+      "title": "划船机$200OFF",
+      "discount": "$200 OFF",
+      "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "HYDROWFREE",
+      "brand": "Hydrow",
+      "source": "verified",
+      "title": "免费试运30天",
+      "discount": "Free Trial",
+      "found_at": "2026-06-13T12:00:00.000000"
     }
   ]
 }

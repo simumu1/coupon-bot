@@ -15,6 +15,7 @@ TARGET_NICHES = {
         'name': '家居花园',
         'brands': [
             'Article', 'Burrow', 'Brooklinen', 'Parachute',
+            'West Elm', 'Rove Concepts',
         ],
         'reddit_subs': ['homeowners', 'DesignMyRoom'],
     },
@@ -22,8 +23,17 @@ TARGET_NICHES = {
         'name': '宠物用品',
         'brands': [
             'BarkBox', 'Furbo', 'LitterRobot', 'TheFarmersDog',
+            'V-Dog', 'Wild Earth',
         ],
         'reddit_subs': ['puppy101', 'CatAdvice'],
+    },
+    'fitness_wellness': {
+        'name': '健身健康',
+        'brands': [
+            'Peloton', 'Tonal', 'Whoop', 'Oura', 'EightSleep',
+            'Lululemon', 'Hydrow',
+        ],
+        'reddit_subs': ['fitness', 'weightlifting'],
     },
 }
 

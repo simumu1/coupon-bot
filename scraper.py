@@ -56,6 +56,20 @@ SEED_COUPONS = [
      'title': '戒指$20OFF', 'discount': '$20 OFF'},
     {'code': 'EIGHT10', 'brand': 'EightSleep', 'source': 'verified',
      'title': '首单10%OFF', 'discount': '10% OFF'},
+    # 家居新增
+    {'code': 'WELCOME15', 'brand': 'West Elm', 'source': 'verified',
+     'title': '首单15%OFF', 'discount': '15% OFF'},
+    {'code': 'SHIPFREE', 'brand': 'West Elm', 'source': 'verified',
+     'title': '满$49免运费', 'discount': 'Free Shipping'},
+    {'code': 'ROVE10', 'brand': 'Rove Concepts', 'source': 'verified',
+     'title': '首单10%OFF', 'discount': '10% OFF'},
+    # 健身新增
+    {'code': 'HELLO25', 'brand': 'Lululemon', 'source': 'verified',
+     'title': '新用户25%OFF', 'discount': '25% OFF'},
+    {'code': 'HYDROW200', 'brand': 'Hydrow', 'source': 'verified',
+     'title': '划船机$200OFF', 'discount': '$200 OFF'},
+    {'code': 'HYDROWFREE', 'brand': 'Hydrow', 'source': 'verified',
+     'title': '免费试运30天', 'discount': 'Free Trial'},
 ]
 
 

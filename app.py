@@ -72,6 +72,36 @@ BRAND_FAQ = {
     'EightSleep': [
         {"q": "Does Eight Sleep offer a first order discount?", "a": "Yes, get 10% off your first Eight Sleep order with code EIGHT10."},
     ],
+    'Casper': [
+        {"q": "Does Casper offer a first-time buyer discount?", "a": "Yes, new customers get 15% off their first order with code SLEEP15."},
+        {"q": "Does Casper offer mattress discounts?", "a": "Yes, save $100 on Casper mattresses with code NAP100."},
+        {"q": "Does Casper have pillow deals?", "a": "Yes, get 20% off Casper pillows with code PILLOW20."},
+        {"q": "What is Casper's trial period?", "a": "Casper offers a 100-night risk-free trial on all mattresses."},
+    ],
+    'V-Dog': [
+        {"q": "Does V-Dog offer a first order discount?", "a": "Yes, new customers get 20% off their first order with code VDOG20."},
+        {"q": "Does V-Dog have a repeat customer discount?", "a": "Yes, returning customers save 10% with code VEGAN10."},
+        {"q": "Is V-Dog food vegan?", "a": "Yes, V-Dog makes 100% plant-based, vegan dog food with complete nutrition."},
+    ],
+    'Wild Earth': [
+        {"q": "Does Wild Earth offer a first order discount?", "a": "Yes, new customers get 15% off their first order with code KOJI15."},
+        {"q": "Does Wild Earth have a satisfaction guarantee?", "a": "Yes, Wild Earth offers a 30-day money-back guarantee with code EARTH30."},
+        {"q": "Is Wild Earth dog food vegan?", "a": "Yes, Wild Earth makes science-backed, plant-based dog food with clean protein from koji."},
+    ],
+    'West Elm': [
+        {"q": "Does West Elm offer a first order discount?", "a": "Yes, new customers get 15% off their first order with code WELCOME15."},
+        {"q": "Does West Elm offer free shipping?", "a": "Yes, West Elm offers free shipping on orders over $49."},
+    ],
+    'Rove Concepts': [
+        {"q": "Does Rove Concepts offer a first order discount?", "a": "Yes, new customers save 10% on their first order with code ROVE10."},
+    ],
+    'Lululemon': [
+        {"q": "Does Lululemon offer a first order discount?", "a": "Yes, new customers save 25% on their first order with code HELLO25."},
+    ],
+    'Hydrow': [
+        {"q": "Does Hydrow offer a discount?", "a": "Yes, save $200 on a Hydrow rowing machine with code HYDROW200."},
+        {"q": "Does Hydrow offer a free trial?", "a": "Yes, Hydrow offers a 30-day free trial with code HYDROWFREE."},
+    ],
 }
 
 
@@ -91,7 +121,7 @@ def generate_brand_schema(brand_name, coupons):
             "discount": disc if disc else "Available",
             "discountCode": c['code'],
             "availability": "https://schema.org/InStock",
-            "url": f"https://couponbot.example.com/brand/{brand_name.lower()}",
+            "url": f"https://simumu.pythonanywhere.com/brand/{brand_name.lower()}",
             "price": "0",
             "priceCurrency": "USD",
         })
@@ -216,7 +246,7 @@ def robots():
     """完全开放给AI爬虫"""
     return """User-agent: *
 Allow: /
-Sitemap: https://couponbot.example.com/sitemap.xml
+Sitemap: https://simumu.pythonanywhere.com/sitemap.xml
 """, 200, {'Content-Type': 'text/plain'}
 
 
@@ -233,7 +263,7 @@ def sitemap():
 
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
-        xml += f'  <url><loc>https://couponbot.example.com{u}</loc></url>\n'
+        xml += f'  <url><loc>https://simumu.pythonanywhere.com{u}</loc></url>\n'
     xml += '</urlset>'
     return xml, 200, {'Content-Type': 'application/xml'}
 
