@@ -62,6 +62,18 @@ SEED_COUPONS = [
      'title': '划船机$200OFF', 'discount': '$200 OFF'},
     {'code': 'HYDROWFREE', 'brand': 'Hydrow', 'source': 'verified',
      'title': '免费试运30天', 'discount': 'Free Trial'},
+    # 家居新增
+    {'code': 'SABAI15', 'brand': 'Sabai', 'source': 'verified',
+     'title': '首单15%OFF', 'discount': '15% OFF'},
+    {'code': 'AVO100', 'brand': 'Avocado', 'source': 'verified',
+     'title': '床垫$100OFF', 'discount': '$100 OFF'},
+    {'code': 'AVOGREEN', 'brand': 'Avocado', 'source': 'verified',
+     'title': '环保赠品套装', 'discount': 'Free Gift'},
+    # 健身新增
+    {'code': 'NT150', 'brand': 'NordicTrack', 'source': 'verified',
+     'title': '设备$150OFF', 'discount': '$150 OFF'},
+    {'code': 'ECHELON100', 'brand': 'Echelon', 'source': 'verified',
+     'title': '单车$100OFF', 'discount': '$100 OFF'},
 ]
 
 

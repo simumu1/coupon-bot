@@ -16,6 +16,7 @@ TARGET_NICHES = {
         'brands': [
             'Article', 'Burrow', 'Brooklinen', 'Parachute',
             'West Elm', 'Rove Concepts',
+            'Sabai', 'Avocado',
         ],
         'reddit_subs': ['homeowners', 'DesignMyRoom'],
     },
@@ -31,11 +32,14 @@ TARGET_NICHES = {
         'name': '健身健康',
         'brands': [
             'Peloton', 'Tonal', 'Whoop', 'Oura', 'EightSleep',
-            'Hydrow',
+            'Hydrow', 'NordicTrack', 'Echelon',
         ],
         'reddit_subs': ['fitness', 'weightlifting'],
     },
 }
+
+# Google Analytics (GA4) - 填入你的 Measurement ID 即可启用
+GA_MEASUREMENT_ID = ''  # 例: 'G-XXXXXXXXXX'
 
 # 联盟平台（需手动注册）
 AFFILIATE_NETWORKS = {

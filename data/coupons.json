@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-13T12:00:00.000000",
-  "total": 28,
+  "updated_at": "2026-06-13T12:08:43.613076",
+  "total": 33,
   "coupons": [
     {
       "code": "WELCOME15",
@@ -225,6 +225,46 @@
       "title": "免费试运30天",
       "discount": "Free Trial",
       "found_at": "2026-06-13T12:00:00.000000"
+    },
+    {
+      "code": "SABAI15",
+      "brand": "Sabai",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:08:43.613076"
+    },
+    {
+      "code": "AVO100",
+      "brand": "Avocado",
+      "source": "verified",
+      "title": "床垫00OFF",
+      "discount": "00 OFF",
+      "found_at": "2026-06-13T12:08:43.613076"
+    },
+    {
+      "code": "AVOGREEN",
+      "brand": "Avocado",
+      "source": "verified",
+      "title": "环保赠品套装",
+      "discount": "Free Gift",
+      "found_at": "2026-06-13T12:08:43.613076"
+    },
+    {
+      "code": "NT150",
+      "brand": "NordicTrack",
+      "source": "verified",
+      "title": "设备50OFF",
+      "discount": "50 OFF",
+      "found_at": "2026-06-13T12:08:43.613076"
+    },
+    {
+      "code": "ECHELON100",
+      "brand": "Echelon",
+      "source": "verified",
+      "title": "单车00OFF",
+      "discount": "00 OFF",
+      "found_at": "2026-06-13T12:08:43.613076"
     }
   ]
 }

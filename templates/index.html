@@ -19,6 +19,17 @@
     </script>
     {% endif %}
 
+    {% if ga_id %}
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ ga_id }}');
+    </script>
+    {% endif %}
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.5; }
@@ -167,6 +178,15 @@
         <h2>📋 Browse by Category</h2>
         <p>Find the best coupon codes and promo codes for your favorite DTC brands. We track discounts from home furniture, pet supplies, fitness equipment, and more — all in one place.</p>
         <p style="margin-top:8px;">{% for key, niche in niches.items() %}<a href="/niche/{{ key }}" style="color:#007aff;text-decoration:none;margin-right:16px;">→ {{ niche.name }}</a>{% endfor %}</p>
+    </div>
+
+    <div class="brand-info" style="margin-top:16px;">
+        <h2>📝 Guides & Articles</h2>
+        <p style="margin-top:8px;">
+            <a href="/article/vegan-pet-food-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Vegan Pet Food Coupons 2026</a>
+            <a href="/article/home-furniture-deals" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Home Furniture Deals & Coupons</a>
+            <a href="/article/fitness-equipment-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Fitness Equipment Coupons & Discounts</a>
+        </p>
     </div>
     {% endif %}
 </div>
