@@ -19,6 +19,11 @@
     </script>
     {% endif %}
 
+    {% if umami_url and umami_site_id %}
+    <!-- Umami 网站统计 (支持优惠券点击追踪) -->
+    <script async defer src="{{ umami_url }}/script.js" data-website-id="{{ umami_site_id }}"></script>
+    {% endif %}
+
     {% if gc_domain %}
     <!-- GoatCounter 网站统计 -->
     <script data-goatcounter="https://{{ gc_domain }}.goatcounter.com/count"
@@ -152,7 +157,7 @@
                     {% if c.found_at %}<span style="color:#b0b0b8;">found {{ c.found_at[:10] }}</span>{% endif %}
                 </div>
             </div>
-            <div class="coupon-code" onclick="copyCode(this, '{{ c.code }}')" data-code="{{ c.code }}">{{ c.code }}</div>
+            <div class="coupon-code" onclick="copyCode(this, '{{ c.code }}', '{{ c.brand }}', '{{ c.discount }}')" data-code="{{ c.code }}" data-brand="{{ c.brand }}" data-discount="{{ c.discount }}">{{ c.code }}</div>
         </div>
         {% endfor %}
     </div>
@@ -210,11 +215,15 @@
 </div>
 
 <script>
-function copyCode(el, code) {
+function copyCode(el, code, brand, discount) {
     navigator.clipboard.writeText(code).then(() => {
         const orig = el.innerHTML;
         el.innerHTML = '✅ Copied!';
         el.classList.add('copied');
+        // Umami 优惠券点击跟踪
+        if (window.umami) {
+            umami.track('copy_coupon', { code: code, brand: brand, discount: discount });
+        }
         setTimeout(() => {
             el.innerHTML = code;
             el.classList.remove('copied');

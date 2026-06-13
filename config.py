@@ -38,11 +38,17 @@ TARGET_NICHES = {
     },
 }
 
-# GoatCounter 网站统计 — 填你的 goatcounter 域名即可启用
-# 注册: https://www.goatcounter.com (邮箱即可，无需翻墙)
-GOATCOUNTER_DOMAIN = ''  # 例: 'couponbot' (对应 couponbot.goatcounter.com)
+# ===== 网站统计 =====
+# Umami (推荐!) — 填你的 Umami Cloud 链接和网站ID即可
+# 注册: https://cloud.umami.is (邮箱注册，无需翻墙)
+# 支持自定义事件追踪（优惠券点击量）
+UMAMI_URL = ''      # 例: 'https://cloud.umami.is'
+UMAMI_WEBSITE_ID = ''  # 例: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 
-# Google Analytics (GA4) - 填入你的 Measurement ID 即可启用
+# GoatCounter 备选 — 无需翻墙，但只能看访问量
+GOATCOUNTER_DOMAIN = ''  # 例: 'couponbot'
+
+# Google Analytics (GA4) - 需翻墙
 GA_MEASUREMENT_ID = ''  # 例: 'G-XXXXXXXXXX'
 
 # 联盟平台（需手动注册）

@@ -4,7 +4,7 @@ import json, os
 from flask import Flask, render_template, jsonify, request
 from datetime import datetime
 
-from config import COUPON_FILE, TARGET_NICHES, GA_MEASUREMENT_ID, GOATCOUNTER_DOMAIN
+from config import COUPON_FILE, TARGET_NICHES, GA_MEASUREMENT_ID, GOATCOUNTER_DOMAIN, UMAMI_URL, UMAMI_WEBSITE_ID
 
 app = Flask(__name__)
 
@@ -183,6 +183,8 @@ def index():
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
                            gc_domain=GOATCOUNTER_DOMAIN,
+                           umami_url=UMAMI_URL,
+                           umami_site_id=UMAMI_WEBSITE_ID,
                            schema=None,
                            faq=None,
                            brand_faq_data=None)
@@ -220,6 +222,8 @@ def brand_page(brand_name):
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
                            gc_domain=GOATCOUNTER_DOMAIN,
+                           umami_url=UMAMI_URL,
+                           umami_site_id=UMAMI_WEBSITE_ID,
                            current_brand=brand_name_display,
                            schema=json.dumps(schema, indent=2),
                            faq=faq,
@@ -245,6 +249,8 @@ def niche_page(niche_key):
                            niches=TARGET_NICHES,
                            ga_id=GA_MEASUREMENT_ID,
                            gc_domain=GOATCOUNTER_DOMAIN,
+                           umami_url=UMAMI_URL,
+                           umami_site_id=UMAMI_WEBSITE_ID,
                            current_niche=niche_key,
                            schema=json.dumps(schema, indent=2),
                            faq=None,
@@ -425,6 +431,8 @@ def article_page(slug):
                            canonical=f'/article/{slug}',
                            ga_id=GA_MEASUREMENT_ID,
                            gc_domain=GOATCOUNTER_DOMAIN,
+                           umami_url=UMAMI_URL,
+                           umami_site_id=UMAMI_WEBSITE_ID,
                            total_brands=len(brands),
                            total_coupons=data['total'])
 

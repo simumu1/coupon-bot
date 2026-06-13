@@ -8,6 +8,11 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://simumu.pythonanywhere.com{{ canonical }}">
     
+    {% if umami_url and umami_site_id %}
+    <!-- Umami 网站统计 -->
+    <script async defer src="{{ umami_url }}/script.js" data-website-id="{{ umami_site_id }}"></script>
+    {% endif %}
+
     {% if gc_domain %}
     <!-- GoatCounter 网站统计 -->
     <script data-goatcounter="https://{{ gc_domain }}.goatcounter.com/count"
