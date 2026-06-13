@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-13T12:08:43.613076",
-  "total": 33,
+  "updated_at": "2026-06-13T12:51:06.424033",
+  "total": 55,
   "coupons": [
     {
       "code": "WELCOME15",
@@ -265,6 +265,182 @@
       "title": "单车00OFF",
       "discount": "00 OFF",
       "found_at": "2026-06-13T12:08:43.613076"
+    },
+    {
+      "code": "YTTP20",
+      "brand": "YouthToThePeople",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "TOWER15",
+      "brand": "Tower28",
+      "source": "verified",
+      "title": "新用户15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "BIOSSANCE10",
+      "brand": "Biossance",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "KOSAS15",
+      "brand": "Kosas",
+      "source": "verified",
+      "title": "新用户15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "CARI20",
+      "brand": "Cariuma",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "ROTHY20",
+      "brand": "Rothy",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "TENTREE15",
+      "brand": "Tentree",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "PACT20",
+      "brand": "Pact",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "BLUELAND15",
+      "brand": "Blueland",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "PUBLIC10",
+      "brand": "PublicGoods",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "WGAC20",
+      "brand": "WhoGivesACrap",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:50:45.025911"
+    },
+    {
+      "code": "YTTP20",
+      "brand": "YouthToThePeople",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "TOWER15",
+      "brand": "Tower28",
+      "source": "verified",
+      "title": "新用户15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "BIOSSANCE10",
+      "brand": "Biossance",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "KOSAS15",
+      "brand": "Kosas",
+      "source": "verified",
+      "title": "新用户15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "CARI20",
+      "brand": "Cariuma",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "ROTHY20",
+      "brand": "Rothy",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "TENTREE15",
+      "brand": "Tentree",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "PACT20",
+      "brand": "Pact",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "BLUELAND15",
+      "brand": "Blueland",
+      "source": "verified",
+      "title": "首单15%OFF",
+      "discount": "15% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "PUBLIC10",
+      "brand": "PublicGoods",
+      "source": "verified",
+      "title": "首单10%OFF",
+      "discount": "10% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
+    },
+    {
+      "code": "WGAC20",
+      "brand": "WhoGivesACrap",
+      "source": "verified",
+      "title": "首单20%OFF",
+      "discount": "20% OFF",
+      "found_at": "2026-06-13T12:51:06.424033"
     }
   ]
 }

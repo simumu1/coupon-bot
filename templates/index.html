@@ -187,8 +187,15 @@
     {% if not current_brand and not current_niche %}
     <div class="brand-info">
         <h2>📋 Browse by Category</h2>
-        <p>Find the best coupon codes and promo codes for your favorite DTC brands. We track discounts from home furniture, pet supplies, fitness equipment, and more — all in one place.</p>
-        <p style="margin-top:8px;">{% for key, niche in niches.items() %}<a href="/niche/{{ key }}" style="color:#007aff;text-decoration:none;margin-right:16px;">→ {{ niche.name }}</a>{% endfor %}</p>
+        <p>Find the best coupon codes and promo codes for your favorite DTC brands. We track discounts across 6 categories — all vegan-friendly, cruelty-free, and eco-conscious.</p>
+        <p style="margin-top:12px;">
+        {% for key, niche in niches.items() %}
+        <a href="/niche/{{ key }}" style="color:#007aff;text-decoration:none;display:block;padding:6px 0;border-bottom:1px solid #f0f0f5;">
+            <strong>{{ niche.name }}</strong><br>
+            <span style="font-size:13px;color:#86868b;">{{ niche.desc[:80] }}…</span>
+        </a>
+        {% endfor %}
+        </p>
     </div>
 
     <div class="brand-info" style="margin-top:16px;">
@@ -197,6 +204,9 @@
             <a href="/article/vegan-pet-food-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Vegan Pet Food Coupons 2026</a>
             <a href="/article/home-furniture-deals" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Home Furniture Deals & Coupons</a>
             <a href="/article/fitness-equipment-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Fitness Equipment Coupons & Discounts</a>
+            <a href="/article/vegan-beauty-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Vegan & Clean Beauty Coupons</a>
+            <a href="/article/sustainable-fashion-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Sustainable & Vegan Fashion Coupons</a>
+            <a href="/article/eco-friendly-home-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Eco-Friendly Home & Cleaning Coupons</a>
         </p>
     </div>
     {% endif %}

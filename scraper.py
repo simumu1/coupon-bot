@@ -74,6 +74,31 @@ SEED_COUPONS = [
      'title': '设备$150OFF', 'discount': '$150 OFF'},
     {'code': 'ECHELON100', 'brand': 'Echelon', 'source': 'verified',
      'title': '单车$100OFF', 'discount': '$100 OFF'},
+    # 个护美妆
+    {'code': 'YTTP20', 'brand': 'YouthToThePeople', 'source': 'verified',
+     'title': '首单20%OFF', 'discount': '20% OFF'},
+    {'code': 'TOWER15', 'brand': 'Tower28', 'source': 'verified',
+     'title': '新用户15%OFF', 'discount': '15% OFF'},
+    {'code': 'BIOSSANCE10', 'brand': 'Biossance', 'source': 'verified',
+     'title': '首单10%OFF', 'discount': '10% OFF'},
+    {'code': 'KOSAS15', 'brand': 'Kosas', 'source': 'verified',
+     'title': '新用户15%OFF', 'discount': '15% OFF'},
+    # 时尚穿搭
+    {'code': 'CARI20', 'brand': 'Cariuma', 'source': 'verified',
+     'title': '首单20%OFF', 'discount': '20% OFF'},
+    {'code': 'ROTHY20', 'brand': 'Rothy', 'source': 'verified',
+     'title': '首单20%OFF', 'discount': '20% OFF'},
+    {'code': 'TENTREE15', 'brand': 'Tentree', 'source': 'verified',
+     'title': '首单15%OFF', 'discount': '15% OFF'},
+    {'code': 'PACT20', 'brand': 'Pact', 'source': 'verified',
+     'title': '首单20%OFF', 'discount': '20% OFF'},
+    # 可持续生活
+    {'code': 'BLUELAND15', 'brand': 'Blueland', 'source': 'verified',
+     'title': '首单15%OFF', 'discount': '15% OFF'},
+    {'code': 'PUBLIC10', 'brand': 'PublicGoods', 'source': 'verified',
+     'title': '首单10%OFF', 'discount': '10% OFF'},
+    {'code': 'WGAC20', 'brand': 'WhoGivesACrap', 'source': 'verified',
+     'title': '首单20%OFF', 'discount': '20% OFF'},
 ]
 
 

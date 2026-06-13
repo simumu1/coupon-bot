@@ -106,6 +106,49 @@ BRAND_FAQ = {
     'Echelon': [
         {"q": "Does Echelon offer a bike discount?", "a": "Yes, save $100 on Echelon bikes with code ECHELON100."},
     ],
+    'YouthToThePeople': [
+        {"q": "Does Youth to the People offer a discount?", "a": "Yes, new customers get 20% off with code YTTP20."},
+        {"q": "Is Youth to the People vegan?", "a": "Yes, all products are 100% vegan and cruelty-free."},
+    ],
+    'Tower28': [
+        {"q": "Does Tower 28 offer a first order discount?", "a": "Yes, new customers save 15% with code TOWER15."},
+        {"q": "Is Tower 28 safe for sensitive skin?", "a": "Yes, Tower 28 is formulated for sensitive skin — no alcohol, no fragrance, no harsh ingredients."},
+    ],
+    'Biossance': [
+        {"q": "Does Biossance offer a discount?", "a": "Yes, save 10% on your first order with code BIOSSANCE10."},
+        {"q": "Is Biossance vegan?", "a": "Yes, Biossance is 100% vegan, cruelty-free, and uses sustainable squalane."},
+    ],
+    'Kosas': [
+        {"q": "Does Kosas offer a discount?", "a": "Yes, new customers get 15% off with code KOSAS15."},
+        {"q": "Is Kosas makeup clean?", "a": "Yes, Kosas makes clean, vegan makeup free from animal-derived ingredients and harsh chemicals."},
+    ],
+    'Cariuma': [
+        {"q": "Does Cariuma offer a first order discount?", "a": "Yes, save 20% on your first pair with code CARI20."},
+        {"q": "Are Cariuma shoes vegan?", "a": "Yes, Cariuma offers a full line of 100% vegan sneakers made from sustainable materials."},
+    ],
+    'Rothy': [
+        {"q": "Does Rothy's offer a discount?", "a": "Yes, new customers get 20% off with code ROTHY20."},
+        {"q": "Are Rothy's shoes sustainable?", "a": "Yes, Rothy's shoes are made from recycled plastic bottles and are machine washable."},
+    ],
+    'Tentree': [
+        {"q": "Does Tentree offer a discount?", "a": "Yes, save 15% on your first order with code TENTREE15."},
+        {"q": "What makes Tentree eco-friendly?", "a": "Tentree plants 10 trees for every item purchased and uses organic, sustainable fabrics."},
+    ],
+    'Pact': [
+        {"q": "Does Pact offer a discount?", "a": "Yes, new customers get 20% off with code PACT20."},
+        {"q": "Is Pact organic?", "a": "Yes, Pact makes organic cotton essentials that are fair trade and GOTS certified."},
+    ],
+    'Blueland': [
+        {"q": "Does Blueland offer a first order discount?", "a": "Yes, save 15% with code BLUELAND15."},
+        {"q": "Is Blueland plastic-free?", "a": "Yes, Blueland cleaning products use tablet concentrates — no plastic bottles, no waste."},
+    ],
+    'PublicGoods': [
+        {"q": "Does Public Goods offer a discount?", "a": "Yes, save 10% on your first order with code PUBLIC10."},
+    ],
+    'WhoGivesACrap': [
+        {"q": "Does Who Gives A Crap offer a discount?", "a": "Yes, get 20% off your first order with code WGAC20."},
+        {"q": "Is Who Gives A Crap eco-friendly?", "a": "Yes, they make 100% bamboo toilet paper and donate 50% of profits to sanitation projects."},
+    ],
 }
 
 
@@ -412,6 +455,95 @@ ARTICLES = {
     <a href="/brand/casper" class="brand-name">🛏️ Casper</a>
     <div class="brand-codes"><strong>SLEEP15</strong> — 15% off · <strong>NAP100</strong> — $100 off mattress · <strong>PILLOW20</strong> — 20% off pillows</div>
 </div>
+''',
+    },
+    'vegan-beauty-coupons': {
+        'title': 'Best Vegan & Clean Beauty Coupons 2026',
+        'description': 'Save on clean, vegan, cruelty-free beauty products with verified coupon codes for Youth to the People, Tower 28, Biossance, Kosas, and more.',
+        'content': '''
+<h2>Clean Beauty That's Kind to Animals</h2>
+<p>Discover the best coupon codes for vegan and clean beauty brands. No animal testing, no animal-derived ingredients, no harsh chemicals — just effective, ethical skincare and makeup.</p>
+
+<h2>Skincare Coupons</h2>
+<div class="brand-card">
+    <a href="/brand/youthtothepeople" class="brand-name">🧴 Youth to the People</a>
+    <div class="brand-codes"><strong>YTTP20</strong> — 20% off first order · 100% vegan superfood skincare</div>
+</div>
+<div class="brand-card">
+    <a href="/brand/tower28" class="brand-name">🧴 Tower 28</a>
+    <div class="brand-codes"><strong>TOWER15</strong> — 15% off · Sensitive skin safe, no alcohol</div>
+</div>
+<div class="brand-card">
+    <a href="/brand/biossance" class="brand-name">🧴 Biossance</a>
+    <div class="brand-codes"><strong>BIOSSANCE10</strong> — 10% off · Vegan squalane skincare</div>
+</div>
+
+<h2>Makeup Coupons</h2>
+<div class="brand-card">
+    <a href="/brand/kosas" class="brand-name">💄 Kosas</a>
+    <div class="brand-codes"><strong>KOSAS15</strong> — 15% off · Clean, vegan makeup</div>
+</div>
+
+<h2>Why Clean Beauty?</h2>
+<p>Clean beauty means products free from parabens, phthalates, sulfates, and animal-derived ingredients. All brands listed are 100% vegan, cruelty-free, and committed to ethical sourcing.</p>
+''',
+    },
+    'sustainable-fashion-coupons': {
+        'title': 'Best Sustainable & Vegan Fashion Coupons 2026',
+        'description': 'Find verified coupon codes for ethical, sustainable fashion brands. Vegan sneakers, organic cotton apparel, and recycled material shoes.',
+        'content': '''
+<h2>Fashion That Doesn't Cost the Earth</h2>
+<p>Sustainable fashion brands prove you don't need to compromise style for ethics. From vegan sneakers to organic cotton basics, these brands are leading the way in eco-conscious apparel.</p>
+
+<h2>Vegan Footwear</h2>
+<div class="brand-card">
+    <a href="/brand/cariuma" class="brand-name">👟 Cariuma</a>
+    <div class="brand-codes"><strong>CARI20</strong> — 20% off · Vegan sneakers, sustainable materials</div>
+</div>
+<div class="brand-card">
+    <a href="/brand/rothy" class="brand-name">👟 Rothy's</a>
+    <div class="brand-codes"><strong>ROTHY20</strong> — 20% off · Shoes from recycled plastic bottles</div>
+</div>
+
+<h2>Ethical Apparel</h2>
+<div class="brand-card">
+    <a href="/brand/tentree" class="brand-name">🌳 Tentree</a>
+    <div class="brand-codes"><strong>TENTREE15</strong> — 15% off · Plants 10 trees per item</div>
+</div>
+<div class="brand-card">
+    <a href="/brand/pact" class="brand-name">👕 Pact</a>
+    <div class="brand-codes"><strong>PACT20</strong> — 20% off · Organic cotton, fair trade</div>
+</div>
+
+<h2>Why Sustainable Fashion?</h2>
+<p>The fashion industry is one of the biggest polluters. Choosing sustainable, vegan, and ethical brands reduces your environmental footprint while supporting fair labor practices.</p>
+''',
+    },
+    'eco-friendly-home-coupons': {
+        'title': 'Best Eco-Friendly Home & Cleaning Coupons 2026',
+        'description': 'Save on sustainable home essentials with coupon codes for Blueland, Public Goods, Who Gives A Crap, and more eco-friendly brands.',
+        'content': '''
+<h2>A Cleaner Home, A Cleaner Planet</h2>
+<p>Eco-friendly home products help reduce plastic waste and chemical exposure. These brands offer sustainable alternatives to everyday household essentials — from cleaning to bathroom.</p>
+
+<h2>Plastic-Free Cleaning</h2>
+<div class="brand-card">
+    <a href="/brand/blueland" class="brand-name">🧹 Blueland</a>
+    <div class="brand-codes"><strong>BLUELAND15</strong> — 15% off · Tablet concentrates, no plastic bottles</div>
+</div>
+
+<h2>Sustainable Household</h2>
+<div class="brand-card">
+    <a href="/brand/publicgoods" class="brand-name">🏠 Public Goods</a>
+    <div class="brand-codes"><strong>PUBLIC10</strong> — 10% off · Eco-friendly home essentials</div>
+</div>
+<div class="brand-card">
+    <a href="/brand/whogivesacrap" class="brand-name">🧻 Who Gives A Crap</a>
+    <div class="brand-codes"><strong>WGAC20</strong> — 20% off · Bamboo toilet paper, 50% to charity</div>
+</div>
+
+<h2>Why Go Plastic-Free?</h2>
+<p>Over 8 million tons of plastic enter our oceans each year. By switching to plastic-free cleaning and household products, you're directly reducing waste and supporting a circular economy.</p>
 ''',
     },
 }
