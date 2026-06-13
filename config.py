@@ -22,7 +22,7 @@ TARGET_NICHES = {
     'pet_supplies': {
         'name': '宠物用品',
         'brands': [
-            'BarkBox', 'Furbo', 'LitterRobot', 'TheFarmersDog',
+            'Furbo', 'LitterRobot',
             'V-Dog', 'Wild Earth',
         ],
         'reddit_subs': ['puppy101', 'CatAdvice'],
@@ -31,7 +31,7 @@ TARGET_NICHES = {
         'name': '健身健康',
         'brands': [
             'Peloton', 'Tonal', 'Whoop', 'Oura', 'EightSleep',
-            'Lululemon', 'Hydrow',
+            'Hydrow',
         ],
         'reddit_subs': ['fitness', 'weightlifting'],
     },

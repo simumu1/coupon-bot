@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-06-13T12:00:00.000000",
-  "total": 33,
+  "total": 28,
   "coupons": [
     {
       "code": "WELCOME15",
@@ -67,22 +67,6 @@
       "found_at": "2026-06-12T00:54:41.343147"
     },
     {
-      "code": "BARK20",
-      "brand": "BarkBox",
-      "source": "verified",
-      "title": "首月20%OFF",
-      "discount": "20% OFF",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
-      "code": "BARKBDAY",
-      "brand": "BarkBox",
-      "source": "verified",
-      "title": "生日月免费升级",
-      "discount": "Free Upgrade",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
       "code": "FURBO20",
       "brand": "Furbo",
       "source": "verified",
@@ -96,22 +80,6 @@
       "source": "verified",
       "title": "首单$50OFF",
       "discount": "$50 OFF",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
-      "code": "FARMER30",
-      "brand": "TheFarmersDog",
-      "source": "verified",
-      "title": "首单30%OFF",
-      "discount": "30% OFF",
-      "found_at": "2026-06-12T00:54:41.343147"
-    },
-    {
-      "code": "WELCOME20",
-      "brand": "TheFarmersDog",
-      "source": "verified",
-      "title": "全场20%OFF",
-      "discount": "20% OFF",
       "found_at": "2026-06-12T00:54:41.343147"
     },
     {
@@ -240,14 +208,6 @@
       "source": "verified",
       "title": "首单10%OFF",
       "discount": "10% OFF",
-      "found_at": "2026-06-13T12:00:00.000000"
-    },
-    {
-      "code": "HELLO25",
-      "brand": "Lululemon",
-      "source": "verified",
-      "title": "新用户25%OFF",
-      "discount": "25% OFF",
       "found_at": "2026-06-13T12:00:00.000000"
     },
     {

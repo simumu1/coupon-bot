@@ -42,19 +42,12 @@ BRAND_FAQ = {
         {"q": "Does Parachute offer a welcome discount?", "a": "Yes, new customers save 20% on their first order with code WELCOME20."},
         {"q": "Does Parachute offer free shipping?", "a": "Yes, Parachute offers free shipping on orders over $50."},
     ],
-    'BarkBox': [
-        {"q": "Does BarkBox offer first box discount?", "a": "Yes, get 20% off your first month with code BARK20."},
-        {"q": "Can I cancel BarkBox anytime?", "a": "Yes, BarkBox has no long-term commitment. You can cancel or skip months anytime."},
-    ],
     'Furbo': [
         {"q": "Does Furbo have a discount for first-time buyers?", "a": "Yes, get 20% off your first Furbo order with code FURBO20."},
     ],
     'LitterRobot': [
         {"q": "Does LitterRobot offer a discount?", "a": "Yes, save $50 on your first LitterRobot order with code LITTER10."},
         {"q": "What is LitterRobot's warranty?", "a": "LitterRobot comes with a 1-year warranty and a 90-day in-home trial."},
-    ],
-    'TheFarmersDog': [
-        {"q": "Does The Farmer's Dog offer a first order discount?", "a": "Yes, get 30% off your first order with code FARMER30."},
     ],
     'Peloton': [
         {"q": "Does Peloton offer accessories discount?", "a": "Yes, save $100 on Peloton accessories with code PELO100."},
@@ -94,9 +87,6 @@ BRAND_FAQ = {
     ],
     'Rove Concepts': [
         {"q": "Does Rove Concepts offer a first order discount?", "a": "Yes, new customers save 10% on their first order with code ROVE10."},
-    ],
-    'Lululemon': [
-        {"q": "Does Lululemon offer a first order discount?", "a": "Yes, new customers save 25% on their first order with code HELLO25."},
     ],
     'Hydrow': [
         {"q": "Does Hydrow offer a discount?", "a": "Yes, save $200 on a Hydrow rowing machine with code HYDROW200."},
