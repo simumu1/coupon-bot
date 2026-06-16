@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if current_brand %}{{ current_brand }} Coupon Codes & Promo Codes 2026 | Get the Best Deals
-{% elif current_niche %}{{ niches[current_niche].name }} Coupons & Deals 2026 | Top Brands
-{% else %}Best DTC Brand Coupon Codes 2026 | Verified Promo Codes
+    <title>{% if current_brand %}{{ current_brand }} Coupon Codes 2026 — Verified Promo Codes
+{% elif current_niche %}{{ niches[current_niche].name }} Coupons &amp; Deals 2026 — DTC Brands
+{% else %}{{ lang_data.site_title }}
 {% endif %}</title>
-    <meta name="description" content="{% if current_brand %}Find the latest verified {{ current_brand }} coupon codes, promo codes, and discounts. Save up to 20% on {{ current_brand }} products. Updated daily.
-{% elif current_niche %}Browse the best {{ niches[current_niche].name }} coupon codes and deals from top brands. Updated regularly with verified discounts.
-{% else %}Find verified coupon codes and promo codes for top DTC brands including home, pet, fitness & more. Updated daily.{% endif %}">
+    <meta name="description" content="{% if current_brand %}Find verified {{ current_brand }} promo codes, coupon codes, and discounts. Save up to 20% with email signup, free shipping, and exclusive deals. Updated daily.
+{% elif current_niche %}Browse verified {{ niches[current_niche].name }} coupon codes from top direct-to-consumer brands. Exclusive discounts, free shipping offers, and email signup deals. Updated regularly.
+{% else %}{{ lang_data.site_desc }}{% endif %}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="https://simumu.pythonanywhere.com{% if current_brand %}/brand/{{ current_brand.lower() }}{% elif current_niche %}/niche/{{ current_niche }}{% else %}/{% endif %}">
+    <link rel="canonical" href="https://simumu.pythonanywhere.com{% if current_brand %}{% if lang == 'zh' %}/zh{% endif %}/brand/{{ current_brand.lower() }}{% elif current_niche %}{% if lang == 'zh' %}/zh{% endif %}/niche/{{ current_niche }}{% else %}{% if lang == 'zh' %}/zh/{% else %}/{% endif %}{% endif %}">
+
+    <!-- OG Tags -->
+    <meta property="og:type" content="{% if current_brand %}website{% elif article %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{% if current_brand %}{{ current_brand }} Coupon Codes 2026 — Verified Promo Codes{% elif current_niche %}{{ niches[current_niche].name }} Coupons &amp; Deals 2026 — DTC Brands{% elif article %}{{ article.title }} — CouponBot{% else %}Best DTC Brand Coupon Codes 2026 — Verified Promo Codes{% endif %}">
+    <meta property="og:description" content="{% if current_brand %}Find verified {{ current_brand }} promo codes and discounts. Save up to 20% with email signup, free shipping, and subscription deals. Updated daily.{% elif current_niche %}Browse the best {{ niches[current_niche].name }} coupon codes from top direct-to-consumer brands. Verified discounts, free shipping offers, and exclusive deals.{% elif article %}{{ article.description }}{% else %}Find verified coupon codes and promo codes for top DTC brands across furniture, pet, fitness, beauty, fashion, home, food, tech, travel, and more. Updated daily with real savings.{% endif %}">
+    <meta property="og:url" content="https://simumu.pythonanywhere.com{% if current_brand %}/brand/{{ current_brand.lower() }}{% elif current_niche %}/niche/{{ current_niche }}{% elif article %}/article/{{ article_slug }}{% else %}/{% endif %}">
+    <meta property="og:site_name" content="CouponBot">
+    <meta property="og:image" content="https://simumu.pythonanywhere.com/static/og-image.png">
+    <meta property="og:locale" content="{% if lang == 'zh' %}zh_CN{% else %}en_US{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if current_brand %}{{ current_brand }} Coupon Codes &amp; Deals 2026{% elif current_niche %}{{ niches[current_niche].name }} Coupons 2026{% elif article %}{{ article.title }}{% else %}Best DTC Brand Coupon Codes 2026{% endif %}">
 
     {% if schema %}
     <script type="application/ld+json">
@@ -49,6 +60,8 @@
         .header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
         .header p { font-size: 15px; color: #a1a1a6; margin-top: 6px; max-width: 600px; }
         .header .updated-badge { display: inline-block; margin-top: 10px; font-size: 12px; color: #30d158; background: rgba(48, 209, 88, 0.15); padding: 3px 10px; border-radius: 12px; }
+        .lang-switch { float: right; color: #007aff; text-decoration: none; font-size: 13px; background: rgba(0,122,255,0.15); padding: 4px 12px; border-radius: 16px; }
+        .lang-switch:hover { background: rgba(0,122,255,0.25); }
         .container { max-width: 960px; margin: 0 auto; padding: 20px; }
         .nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
         .nav a { padding: 7px 16px; border-radius: 20px; background: #e8e8ed; color: #1d1d1f; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s; }
@@ -69,6 +82,7 @@
         .coupon-code.copied { background: #34c759; border-color: #34c759; color: #fff; }
         .coupon-source { font-size: 11px; color: #b0b0b8; margin-top: 4px; }
         .tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 8px; background: #f0f0f5; color: #86868b; margin-right: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeago-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 8px; background: #e8f5e9; color: #2e7d32; }
         .tag.verified { background: #e8f5e9; color: #2e7d32; }
         .tag.reddit { background: #fff3e0; color: #e65100; }
         .tag.brand { background: #e3f2fd; color: #1565c0; }
@@ -95,6 +109,16 @@
         .footer a { color: #86868b; text-decoration: none; margin: 0 8px; }
         .footer a:hover { color: #007aff; }
 
+        /* Vote buttons */
+        .vote-btns { display: flex; gap: 4px; margin-left: 10px; flex-shrink: 0; }
+        .vote-btn { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; cursor: pointer; transition: all 0.2s; border: 1.5px solid; user-select: none; }
+        .vote-yes { border-color: #34c759; color: #34c759; background: #f0fff0; }
+        .vote-yes:hover { background: #34c759; color: #fff; }
+        .vote-yes.voted { background: #34c759; color: #fff; }
+        .vote-no { border-color: #ff3b30; color: #ff3b30; background: #fff0f0; }
+        .vote-no:hover { background: #ff3b30; color: #fff; }
+        .vote-no.voted { background: #ff3b30; color: #fff; }
+
         @media (max-width: 640px) {
             .header h1 { font-size: 22px; }
             .coupon-card { flex-direction: column; align-items: stretch; gap: 12px; }
@@ -105,19 +129,26 @@
 </head>
 <body>
 <div class="header">
+    {% if breadcrumb %}
+    <script type="application/ld+json">{{ breadcrumb|safe }}</script>
+    {% endif %}
     <div class="header-inner">
         <h1>
             {% if current_brand %}🏷️ {{ current_brand }} Coupon Codes
             {% elif current_niche %}🏷️ {{ niches[current_niche].name }} Coupons
-            {% else %}🏷️ Best DTC Coupon Codes
+            {% else %}{{ lang_data.h1 }}
             {% endif %}
         </h1>
         <p>
             {% if current_brand %}Find the latest verified {{ current_brand }} promo codes and discounts. Updated daily.
             {% elif current_niche %}Browse {{ niches[current_niche].name }} coupon codes from top brands.
-            {% else %}Find verified coupon codes for top DTC brands. Save money on home, pet, fitness & more.
+            {% else %}{{ lang_data.h1_sub }}
             {% endif %}
         </p>
+        {% if not current_brand and not current_niche %}
+        <input type="text" class="search-bar" placeholder="🔍 Search brands..." oninput="searchBrands(this)" style="width:100%;max-width:400px;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:14px;margin-top:6px;outline:none;">
+        {% endif %}
+        <a href="{{ lang_data.lang_href }}" class="lang-switch">{{ lang_data.lang_switch }}</a>
         {% if updated %}
         <div class="updated-badge">✓ Updated {{ updated[:10] }}</div>
         {% endif %}
@@ -126,21 +157,21 @@
 
 <div class="container">
     <nav class="nav">
-        <a href="/" class="{% if not current_brand and not current_niche %}active{% endif %}">🏠 All</a>
+        <a href="{% if lang == 'zh' %}/zh/{% else %}/{% endif %}" class="{% if not current_brand and not current_niche %}active{% endif %}">{{ lang_data.nav_all }}</a>
         {% for key, niche in niches.items() %}
-        <a href="/niche/{{ key }}" class="{% if current_niche == key %}active{% endif %}">{{ niche.name }}</a>
+        <a href="{% if lang == 'zh' %}/zh/niche/{{ key }}{% else %}/niche/{{ key }}{% endif %}" class="{% if current_niche == key %}active{% endif %}">{{ niche.name }}</a>
         {% endfor %}
     </nav>
 
     <div class="stats">
         <div>
-            <span>Total: <strong>{{ total }}</strong> coupons</span>
+            <span>{{ lang_data.total_coupons }}: <strong>{{ total }}</strong></span>
             {% if current_brand %}
-            <span style="margin-left: 12px;">for <strong>{{ current_brand }}</strong></span>
+            <span style="margin-left: 12px;">· <strong>{{ current_brand }}</strong></span>
             {% endif %}
         </div>
         {% if updated %}
-        <span>🔄 Last checked: <strong>{{ updated[:10] }}</strong></span>
+        <span>🔄 {{ lang_data.last_checked }}: <strong>{{ updated[:10] }}</strong></span>
         {% endif %}
     </div>
 
@@ -149,15 +180,19 @@
         {% for c in coupons %}
         <div class="coupon-card" itemscope itemtype="https://schema.org/Offer">
             <div class="coupon-left">
-                {% if not current_brand %}<a href="/brand/{{ c.brand }}" class="coupon-brand">{{ c.brand }}</a>{% endif %}
+                {% if not current_brand %}<a href="{% if lang == 'zh' %}/zh{% endif %}/brand/{{ c.brand }}" class="coupon-brand">{{ c.brand }}</a>{% endif %}
                 <div class="coupon-title" itemprop="description">{{ c.title }}</div>
                 {% if c.discount %}<div class="coupon-discount">💰 {{ c.discount }}</div>{% endif %}
                 <div class="coupon-source">
                     <span class="tag {% if c.source == 'verified' %}verified{% else %}{{ c.source }}{% endif %}">{{ c.source|upper }}</span>
-                    {% if c.found_at %}<span style="color:#b0b0b8;">found {{ c.found_at[:10] }}</span>{% endif %}
+                    <span class="timeago-badge">{{ c.found_at|timeago }}</span>
                 </div>
             </div>
             <div class="coupon-code" onclick="copyCode(this, '{{ c.code }}', '{{ c.brand }}', '{{ c.discount }}')" data-code="{{ c.code }}" data-brand="{{ c.brand }}" data-discount="{{ c.discount }}">{{ c.code }}</div>
+            <div class="vote-btns">
+                <span class="vote-btn vote-yes" onclick="voteCoupon(this.dataset.code, this.dataset.brand, 'yes', this)" data-code="{{ c.code }}" data-brand="{{ c.brand }}" title="{{ lang_data.vote_yes }}">✓</span>
+                <span class="vote-btn vote-no" onclick="voteCoupon(this.dataset.code, this.dataset.brand, 'no', this)" data-code="{{ c.code }}" data-brand="{{ c.brand }}" title="{{ lang_data.vote_no }}">✗</span>
+            </div>
         </div>
         {% endfor %}
     </div>
@@ -166,6 +201,44 @@
         <h3>🕐 No coupons yet</h3>
         <p>Run the scraper: <code>python scraper.py</code></p>
     </div>
+    {% endif %}
+
+    {% if current_brand and brand_details %}
+    <!-- Shopping Policies -->
+    <div class="brand-info">
+        <h2>📋 {{ current_brand }} Shopping Policies</h2>
+        <ul style="list-style:none;padding:0;margin:8px 0 0;">
+            <li style="padding:6px 0;"><strong>🔄 Returns:</strong> {{ brand_details.policies.return }}</li>
+            <li style="padding:6px 0;"><strong>🚚 Shipping:</strong> {{ brand_details.policies.shipping }}</li>
+            <li style="padding:6px 0;"><strong>🛡️ Warranty:</strong> {{ brand_details.policies.warranty }}</li>
+        </ul>
+    </div>
+
+    <!-- Savings Tips -->
+    <div class="brand-info" style="margin-top:16px;">
+        <h2>💡 Money-Saving Tips for {{ current_brand }}</h2>
+        <ul style="list-style:none;padding:0;margin:8px 0 0;">
+            {% for tip in brand_details.tips %}
+            <li style="padding:6px 0;">💰 {{ tip }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Competitor Brands -->
+    {% if brand_details.competitors %}
+    <div class="brand-info" style="margin-top:16px;">
+        <h2>🏬 Similar Brands to {{ current_brand }}</h2>
+        <p style="font-size:14px;color:#86868b;margin:4px 0 8px;">Looking for alternatives? Check out these similar DTC brands:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            {% for comp in brand_details.competitors %}
+            <a href="{% if lang == 'zh' %}/zh{% endif %}/brand/{{ comp.lower() }}" style="background:#f5f5f7;padding:8px 16px;border-radius:8px;text-decoration:none;color:#1d1d1f;font-size:14px;font-weight:500;">
+                {{ comp }} →
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
     {% endif %}
 
     {% if current_brand and faq %}
@@ -183,11 +256,48 @@
     </div>
     {% endif %}
 
+    <!-- Niche Page FAQ Section -->
+    {% if current_niche and faq %}
+    <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>❓ {{ niches[current_niche].name }} Coupon FAQs</h2>
+        {% for item in faq %}
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">{{ item.q }}</div>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">{{ item.a }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Niche Page Rich Content -->
+    {% if current_niche and niche_content %}
+    <div class="brand-info">
+        {{ niche_content | safe }}
+    </div>
+    {% endif %}
+
+    <!-- Homepage FAQ Section -->
+    {% if not current_brand and not current_niche and faq %}
+    <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>❓ Frequently Asked Questions</h2>
+        {% for item in faq %}
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">{{ item.q }}</div>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">{{ item.a }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <!-- Homepage specific content -->
     {% if not current_brand and not current_niche %}
     <div class="brand-info">
-        <h2>📋 Browse by Category</h2>
-        <p>Find the best coupon codes and promo codes for your favorite DTC brands. We track discounts across 6 categories — all vegan-friendly, cruelty-free, and eco-conscious.</p>
+        <h2>{{ lang_data.browse_by }}</h2>
+        <p>{{ lang_data.h1_sub }}</p>
         <p style="margin-top:12px;">
         {% for key, niche in niches.items() %}
         <a href="/niche/{{ key }}" style="color:#007aff;text-decoration:none;display:block;padding:6px 0;border-bottom:1px solid #f0f0f5;">
@@ -198,6 +308,19 @@
         </p>
     </div>
 
+    {% if popular_brands %}
+    <div class="brand-info" style="margin-top:16px;">
+        <h2>🔥 Popular Brands</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
+            {% for b in popular_brands %}
+            <a href="{% if lang == 'zh' %}/zh{% endif %}/brand/{{ b.lower() }}" style="background:#f5f5f7;padding:10px 18px;border-radius:10px;text-decoration:none;color:#1d1d1f;font-size:14px;font-weight:500;border:1px solid #eee;">
+                {{ b }} →
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
     <div class="brand-info" style="margin-top:16px;">
         <h2>📝 Guides & Articles</h2>
         <p style="margin-top:8px;">
@@ -207,21 +330,26 @@
             <a href="/article/vegan-beauty-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Vegan & Clean Beauty Coupons</a>
             <a href="/article/sustainable-fashion-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Sustainable & Vegan Fashion Coupons</a>
             <a href="/article/eco-friendly-home-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Eco-Friendly Home & Cleaning Coupons</a>
+            <a href="/article/vegan-food-beverage-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Vegan Food & Beverage Coupons</a>
+            <a href="/article/tech-gadget-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Eco-Friendly Tech & Gadget Coupons</a>
+            <a href="/article/travel-luggage-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Travel & Luggage Coupon Codes</a>
+            <a href="/article/baby-kids-coupons" style="color:#007aff;text-decoration:none;display:block;padding:4px 0;">→ Best Baby & Kids Coupons</a>
         </p>
     </div>
     {% endif %}
 </div>
 
 <div class="footer">
-    <p>CouponBot · Automatically collected coupon codes for reference</p>
-    <p>Always verify coupon validity before checkout</p>
+    <p>{{ lang_data.footer_text }}</p>
+    <p>{{ lang_data.footer_verify }}</p>
     <p>
         {% for key, niche in niches.items() %}
-        <a href="/niche/{{ key }}">{{ niche.name }}</a>
+        <a href="{% if lang == 'zh' %}/zh/niche/{{ key }}{% else %}/niche/{{ key }}{% endif %}">{{ niche.name }}</a>
         {% endfor %}
-        <a href="/">Home</a>
+        <a href="{% if lang == 'zh' %}/zh/{% else %}/{% endif %}">{{ lang_data.nav_all }}</a>
+        <a href="{% if lang == 'zh' %}/zh{% endif %}/submit">{{ lang_data.submit_link }}</a>
     </p>
-    <p style="margin-top:8px;color:#b0b0b8;">&copy; 2026 CouponBot · Open data for everyone</p>
+    <p style="margin-top:8px;color:#b0b0b8;">&copy; 2026 CouponBot · {{ lang_data.footer_copyright }}</p>
 </div>
 
 <script>
@@ -244,6 +372,27 @@ function toggleFaq(el) {
     el.classList.toggle('open');
     const answer = el.nextElementSibling;
     answer.classList.toggle('open');
+}
+function voteCoupon(code, brand, vote, el) {
+    fetch('/api/vote', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({code, brand, vote})
+    }).then(r => r.json()).then(d => {
+        if (d.ok) {
+            const card = el.closest('.coupon-card');
+            card.querySelectorAll('.vote-btn').forEach(b => b.classList.remove('voted'));
+            el.classList.add('voted');
+        }
+    }).catch(() => {});
+}
+function searchBrands(input) {
+    const q = input.value.toLowerCase().trim();
+    document.querySelectorAll('.coupon-card').forEach(c => {
+        const brand = (c.querySelector('.coupon-brand') || {}).textContent || '';
+        const title = (c.querySelector('.coupon-title') || {}).textContent || '';
+        c.style.display = !q || brand.toLowerCase().includes(q) || title.toLowerCase().includes(q) ? '' : 'none';
+    });
 }
 </script>
 </body>

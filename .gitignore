@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+check_article_codes.py
+deploy_update.py
+fix_article_codes.py
+generate_content.py
+niche_content.py
+sync_config.py
+patch_insert.py
+pipeline.py
+.vscode/
+.idea/

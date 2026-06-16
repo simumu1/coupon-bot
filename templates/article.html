@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | CouponBot</title>
     <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://simumu.pythonanywhere.com{{ canonical }}">
+    <meta property="og:site_name" content="CouponBot">
+    <meta property="og:image" content="https://simumu.pythonanywhere.com/static/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://simumu.pythonanywhere.com{{ canonical }}">
     
     {% if umami_url and umami_site_id %}
-    <!-- Umami 网站统计 -->
     <script async defer src="{{ umami_url }}/script.js" data-website-id="{{ umami_site_id }}"></script>
     {% endif %}
-
     {% if gc_domain %}
-    <!-- GoatCounter 网站统计 -->
-    <script data-goatcounter="https://{{ gc_domain }}.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://{{ gc_domain }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     {% endif %}
-
     {% if ga_id %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ ga_id }}');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ ga_id }}');</script>
     {% endif %}
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://simumu.pythonanywhere.com/"},
+            {"@type": "ListItem", "position": 2, "name": "{{ title }}", "item": "https://simumu.pythonanywhere.com{{ canonical }}"}
+        ]
+    }
+    </script>
 
     <script type="application/ld+json">
     {
@@ -35,10 +46,16 @@
         "@type": "Article",
         "headline": "{{ title }}",
         "description": "{{ description }}",
-        "datePublished": "2026-06-13",
-        "dateModified": "2026-06-13"
+        "datePublished": "{{ date_published }}",
+        "dateModified": "{{ date_modified }}"
     }
     </script>
+
+    {% if faq_schema_json %}
+    <script type="application/ld+json">
+    {{ faq_schema_json | safe }}
+    </script>
+    {% endif %}
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -60,9 +77,23 @@
         .cta p { color: #fff; margin-bottom: 0; }
         .back-link { display: inline-block; margin-top: 20px; color: #007aff; text-decoration: none; font-size: 14px; }
         .back-link:hover { text-decoration: underline; }
+        /* FAQ Section */
+        .faq-section { background: #fff; border-radius: 14px; padding: 24px; margin: 28px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .faq-section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+        .faq-item { border-top: 1px solid #f0f0f5; padding: 14px 0; }
+        .faq-item:first-child { border-top: none; }
+        .faq-q { font-size: 15px; font-weight: 600; color: #1d1d1f; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-q::after { content: '+'; font-size: 18px; color: #86868b; }
+        .faq-q.open::after { content: '−'; }
+        .faq-a { font-size: 14px; color: #86868b; margin-top: 8px; display: none; line-height: 1.6; }
+        .faq-a.open { display: block; }
         .footer { text-align: center; padding: 30px 20px; color: #86868b; font-size: 12px; }
         .footer a { color: #86868b; text-decoration: none; margin: 0 8px; }
         .footer a:hover { color: #007aff; }
+        .related-links { margin: 20px 0; padding: 16px 20px; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .related-links h3 { font-size: 16px; margin-bottom: 10px; }
+        .related-links a { display: block; padding: 4px 0; color: #007aff; text-decoration: none; font-size: 14px; }
+        .related-links a:hover { text-decoration: underline; }
         @media (max-width: 640px) {
             .header h1 { font-size: 22px; }
             .brand-card { flex-direction: column; align-items: flex-start; }
@@ -81,6 +112,13 @@
         {{ content_html | safe }}
     </div>
 
+    {% if faq_html %}
+    <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>❓ Frequently Asked Questions</h2>
+        {{ faq_html | safe }}
+    </div>
+    {% endif %}
+
     <div class="cta">
         <p>🔍 <a href="/">Browse All {{ total_brands }} Brands & {{ total_coupons }} Coupons →</a></p>
     </div>
@@ -88,10 +126,18 @@
     <a href="/" class="back-link">← Back to CouponBot Home</a>
 </div>
 <div class="footer">
-    <p>CouponBot · Automatically collected coupon codes for reference</p>
+    <p>CouponBot · Real deals from top DTC brands</p>
     <p>Always verify coupon validity before checkout</p>
-    <p><a href="/">Home</a></p>
+    <p><a href="/">Home</a> · <a href="/niche/home_garden">家居花园</a> · <a href="/niche/pet_supplies">宠物用品</a> · <a href="/niche/eco_living">可持续生活</a></p>
     <p style="margin-top:8px;color:#b0b0b8;">&copy; 2026 CouponBot</p>
 </div>
+
+<script>
+function toggleFaq(el) {
+    el.classList.toggle('open');
+    const answer = el.nextElementSibling;
+    answer.classList.toggle('open');
+}
+</script>
 </body>
 </html>
