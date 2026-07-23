@@ -1,8 +1,7 @@
-# CouponVeg
+# CouponBot
 
-**https://www.couponveg.com** — 961 verified vegan coupon codes.
+CouponVeg.com — 961 verified vegan \& sustainable coupon codes.
 
-[![Coupons](https://img.shields.io/badge/coupons-961-blue)](https://www.couponveg.com)
-
-## Links
-- [CouponVeg.com](https://www.couponveg.com) - Start saving on ethical brands!
+**Related:**
+- [CouponVeg.com](https://couponveg.com) — Find verified coupon codes
+- [Hedirbase.com](https://hedirbase.com) — Curated web directory
